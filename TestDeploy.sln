@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjHaag.Persitence", "DjHaag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjHaag.Application", "DjHaag.Application\DjHaag.Application.csproj", "{F634E143-E5C8-40F5-B17E-A34B3B78B60C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjHaag.Infrastructure", "DjHaag.Infrastructure\DjHaag.Infrastructure.csproj", "{3576A0C3-022C-41B3-ADF6-BD9CF0B16C90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{F634E143-E5C8-40F5-B17E-A34B3B78B60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F634E143-E5C8-40F5-B17E-A34B3B78B60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F634E143-E5C8-40F5-B17E-A34B3B78B60C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3576A0C3-022C-41B3-ADF6-BD9CF0B16C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3576A0C3-022C-41B3-ADF6-BD9CF0B16C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3576A0C3-022C-41B3-ADF6-BD9CF0B16C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3576A0C3-022C-41B3-ADF6-BD9CF0B16C90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
