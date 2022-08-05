@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDeploy", "TestDeploy\TestDeploy.csproj", "{82BA0EE9-9071-4CC9-9F01-7C3A3E4D6FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjHaag.Persitence", "DjHaag.Persitence\DjHaag.Persitence.csproj", "{27256A54-CEC0-48CE-9A83-8693EC833695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjHaag.Application", "DjHaag.Application\DjHaag.Application.csproj", "{F634E143-E5C8-40F5-B17E-A34B3B78B60C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82BA0EE9-9071-4CC9-9F01-7C3A3E4D6FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82BA0EE9-9071-4CC9-9F01-7C3A3E4D6FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82BA0EE9-9071-4CC9-9F01-7C3A3E4D6FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82BA0EE9-9071-4CC9-9F01-7C3A3E4D6FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27256A54-CEC0-48CE-9A83-8693EC833695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27256A54-CEC0-48CE-9A83-8693EC833695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27256A54-CEC0-48CE-9A83-8693EC833695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27256A54-CEC0-48CE-9A83-8693EC833695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F634E143-E5C8-40F5-B17E-A34B3B78B60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F634E143-E5C8-40F5-B17E-A34B3B78B60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F634E143-E5C8-40F5-B17E-A34B3B78B60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F634E143-E5C8-40F5-B17E-A34B3B78B60C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

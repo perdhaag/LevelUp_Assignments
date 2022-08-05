@@ -1,0 +1,75 @@
+﻿@page "/counter"
+@using DjHaag.Application.Person.Commands
+@using DjHaag.Application.Person.Queries
+@inject GetPersonQuery _personQuery
+@inject AddPersonCommand _personCommand
+
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<EditForm Model="@person" OnValidSubmit="() => AddPerson(person)">
+    <InputText id="FirstName" @bind-Value="person.FirstName"/>
+    <InputText id="FirstName" @bind-Value="person.LastName"/>
+    <button type="submit">Submit</button>
+</EditForm>
+
+
+<br/>
+<br/>
+@if (personList is null)
+{
+    <div class="spinner"></div>
+    <p style="display: block">Loading People...</p>
+}
+else
+{
+    if (personList is not null)
+    {
+        foreach (var person in personList)
+        {
+        <div>
+            @person.FirstName @person.LastName
+        </div>
+        }
+    }
+    <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+}
+
+
+@code {
+    private PersonDto person = new PersonDto();
+    private List<PersonDto> personList;
+
+    private int currentCount = 0;
+    
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+        
+    protected override async Task OnInitializedAsync()
+    {
+        
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            personList = await Task.Run(() => _personQuery.GetPersonQueryHandler());
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    private async Task AddPerson(PersonDto person)
+    {
+        var personToAdd = await Task.Run(() => _personCommand.AddPersonCommandHandler(person));
+        
+        personList = await _personQuery.GetPersonQueryHandler();
+        await InvokeAsync(StateHasChanged);
+    }
+}

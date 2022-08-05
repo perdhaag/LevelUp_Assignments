@@ -1,0 +1,7 @@
+C:\Users\per.haagensen\RiderProjects\TestDeploy\TestDeploy\obj\Release\net6.0\PubTmp\Out\TestDeploy.exe
+C:\Users\per.haagensen\RiderProjects\TestDeploy\TestDeploy\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\per.haagensen\RiderProjects\TestDeploy\TestDeploy\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\per.haagensen\RiderProjects\TestDeploy\TestDeploy\obj\Release\net6.0\PubTmp\Out\TestDeploy.dll
+C:\Users\per.haagensen\RiderProjects\TestDeploy\TestDeploy\obj\Release\net6.0\PubTmp\Out\TestDeploy.deps.json
+C:\Users\per.haagensen\RiderProjects\TestDeploy\TestDeploy\obj\Release\net6.0\PubTmp\Out\TestDeploy.runtimeconfig.json
+C:\Users\per.haagensen\RiderProjects\TestDeploy\TestDeploy\obj\Release\net6.0\PubTmp\Out\TestDeploy.pdb
