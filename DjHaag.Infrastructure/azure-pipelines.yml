@@ -59,5 +59,5 @@ steps:
     azureSubscription: 'Azure subscription 1(c9274575-a810-4dcd-8b6c-b9dd2940590b)'
     appType: 'webApp'
     appName: 'toylaunchvux5cphfscsxe'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
