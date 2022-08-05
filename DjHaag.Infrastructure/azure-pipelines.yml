@@ -1,4 +1,5 @@
 # ASP.NET Core (.NET Framework)
+
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
@@ -47,3 +48,11 @@ steps:
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'myWebsiteName'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(c9274575-a810-4dcd-8b6c-b9dd2940590b)'
+    appType: 'webApp'
+    appName: 'toylaunchvux5cphfscsxe'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
