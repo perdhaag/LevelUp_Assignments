@@ -102,6 +102,4 @@ fabric.properties
 # *.ipr 
 
 .idea/
-DjHaag.Application/obj/
-DjHaag.Infrastructure/obj/
-DjHaag.Persitence/obj/
+*/obj/*
