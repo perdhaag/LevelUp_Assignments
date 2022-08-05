@@ -1,11 +1,9 @@
-using System.Configuration;
 using DjHaag.Application.Person.Commands;
 using DjHaag.Application.Person.Queries;
 using DjHaag.Persitence;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
-using TestDeploy.Data;
+using DjHaag.Web.Data;
+using DjHaag.Web.Pages;
 
 var builder = WebApplication.CreateBuilder(args);
 

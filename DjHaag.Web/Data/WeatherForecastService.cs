@@ -1,4 +1,4 @@
-namespace TestDeploy.Data;
+namespace DjHaag.Web.Data;
 
 public class WeatherForecastService
 {
