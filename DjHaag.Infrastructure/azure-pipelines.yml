@@ -24,11 +24,12 @@ steps:
     packageType: 'runtime'
     version: '6.0.x'
 - task: NuGetAuthenticate@0
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
     feedsToUse: 'select'
-    vstsFeed: 'my-vsts-feed' # A series of numbers and letters
+    vstsFeed: '6228f45a-ce84-4cfe-8766-f0848f6c97b5'
 
 - task: DotNetCoreCLI@2
   inputs:
