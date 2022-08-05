@@ -48,7 +48,12 @@ steps:
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'myWebsiteName'
-
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Azure subscription 1(c9274575-a810-4dcd-8b6c-b9dd2940590b)'
