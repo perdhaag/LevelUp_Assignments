@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDeploy", "TestDeploy\TestDeploy.csproj", "{82BA0EE9-9071-4CC9-9F01-7C3A3E4D6FBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjHaag.Web", "DjHaag.Web\DjHaag.Web.csproj", "{82BA0EE9-9071-4CC9-9F01-7C3A3E4D6FBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DjHaag.Persitence", "DjHaag.Persitence\DjHaag.Persitence.csproj", "{27256A54-CEC0-48CE-9A83-8693EC833695}"
 EndProject
