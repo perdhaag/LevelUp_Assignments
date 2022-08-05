@@ -2,6 +2,9 @@
 *.DS_Store
 [Tt]humbs.db
 
+DjHaag.Infrastructure/obj/
+DjHaag.Application/obj/
+DjHaag.Persitence/obj/
 #Visual Studio Files
 [Oo]bj
 [Bb]in
