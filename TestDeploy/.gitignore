@@ -103,3 +103,6 @@ fabric.properties
 
 .idea/
 */obj/*
+bin
+obj
+packages
