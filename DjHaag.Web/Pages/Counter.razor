@@ -1,8 +1,10 @@
 ﻿@page "/counter"
 @using DjHaag.Application.Person.Commands
 @using DjHaag.Application.Person.Queries
+@using DjHaag.Application.CompetenceMatrice
 @inject GetPersonQuery _personQuery
 @inject AddPersonCommand _personCommand
+@inject GetCompetenceMatrice _query;
 
 
 <PageTitle>Counter</PageTitle>
@@ -46,8 +48,9 @@ else
 
     private int currentCount = 0;
     
-    private void IncrementCount()
+    private async Task IncrementCount()
     {
+        await _query.GetCompetenceMatriceQuery();
         currentCount++;
     }
         

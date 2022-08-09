@@ -1,3 +1,4 @@
+using DjHaag.Application.CompetenceMatrice;
 using DjHaag.Application.Person.Commands;
 using DjHaag.Application.Person.Queries;
 using DjHaag.Persitence;
@@ -16,6 +17,7 @@ builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddDbContext<DjHaagDbContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("myconn")));
 builder.Services.AddTransient<AddPersonCommand>();
 builder.Services.AddTransient<GetPersonQuery>();
+builder.Services.AddTransient<GetCompetenceMatrice>();
 
 var app = builder.Build();
 

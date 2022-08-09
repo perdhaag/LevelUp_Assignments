@@ -1,0 +1,532 @@
+[
+  {
+    "Id": 1,
+    "Theme": ".NET",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 2,
+    "Theme": ".NET Core",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 3,
+    "Theme": ".ASP.NET Webforms",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 4,
+    "Theme": ".ASP.NET MVC",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 5,
+    "Theme": "ASP.NET WebAPI",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 6,
+    "Theme": "WCF",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 7,
+    "Theme": "F#",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 8,
+    "Theme": "PowerShell",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 9,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 1
+  },
+  {
+    "Id": 10,
+    "Theme": "SCRUM",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 11,
+    "Theme": "KANBAN",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 12,
+    "Theme": "TDD",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 13,
+    "Theme": "DDD",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 14,
+    "Theme": "Design patterns",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 15,
+    "Theme": "SOLID / Clean code",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 16,
+    "Theme": "Microservices",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 17,
+    "Theme": "Serverless",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 18,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 2
+  },
+  {
+    "Id": 19,
+    "Theme": "HTML",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 20,
+    "Theme": "CSS",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 21,
+    "Theme": "Angular < v1",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 22,
+    "Theme": "Angular > v2",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 23,
+    "Theme": "Angular Store",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 24,
+    "Theme": "React",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 25,
+    "Theme": "Redux",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 26,
+    "Theme": "JQuery",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 27,
+    "Theme": "Vue",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 28,
+    "Theme": "Knockout",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 29,
+    "Theme": "TypeScript",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 30,
+    "Theme": "Node.JS",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 31,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 3
+  },
+  {
+    "Id": 32,
+    "Theme": "Karma",
+    "CompetenceMatriceId": 4
+  },
+  {
+    "Id": 33,
+    "Theme": "Jasmin",
+    "CompetenceMatriceId": 4
+  },
+  {
+    "Id": 34,
+    "Theme": "Selenium",
+    "CompetenceMatriceId": 4
+  },
+  {
+    "Id": 35,
+    "Theme": "Chutzpah",
+    "CompetenceMatriceId": 4
+  },
+  {
+    "Id": 36,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 4
+  },
+  {
+    "Id": 37,
+    "Theme": "Entity Framework",
+    "CompetenceMatriceId": 5
+  },
+  {
+    "Id": 38,
+    "Theme": "Dapper",
+    "CompetenceMatriceId": 5
+  },
+  {
+    "Id": 39,
+    "Theme": "NHibernate",
+    "CompetenceMatriceId": 5
+  },
+  {
+    "Id": 40,
+    "Theme": "Linq to SQL",
+    "CompetenceMatriceId": 5
+  },
+  {
+    "Id": 41,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 5
+  },
+  {
+    "Id": 42,
+    "Theme": "NUnit",
+    "CompetenceMatriceId": 6
+  },
+  {
+    "Id": 43,
+    "Theme": "MSTest",
+    "CompetenceMatriceId": 6
+  },
+  {
+    "Id": 44,
+    "Theme": "XUnit",
+    "CompetenceMatriceId": 6
+  },
+  {
+    "Id": 45,
+    "Theme": "RhinoMocks",
+    "CompetenceMatriceId": 6
+  },
+  {
+    "Id": 46,
+    "Theme": "Moq",
+    "CompetenceMatriceId": 6
+  },
+  {
+    "Id": 47,
+    "Theme": "FakeItEasy",
+    "CompetenceMatriceId": 6
+  },
+  {
+    "Id": 48,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 6
+  },
+  {
+    "Id": 49,
+    "Theme": "NServiceBus",
+    "CompetenceMatriceId": 7
+  },
+  {
+    "Id": 50,
+    "Theme": "Azure Service Bus",
+    "CompetenceMatriceId": 7
+  },
+  {
+    "Id": 51,
+    "Theme": "MassTransit",
+    "CompetenceMatriceId": 7
+  },
+  {
+    "Id": 52,
+    "Theme": "Kafka",
+    "CompetenceMatriceId": 7
+  },
+  {
+    "Id": 53,
+    "Theme": "MSMQ",
+    "CompetenceMatriceId": 7
+  },
+  {
+    "Id": 54,
+    "Theme": "RabbitMQ",
+    "CompetenceMatriceId": 7
+  },
+  {
+    "Id": 55,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 7
+  },
+  {
+    "Id": 56,
+    "Theme": "TeamCity",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 57,
+    "Theme": "TFS/Visual Studio Team Services",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 58,
+    "Theme": "Bamboo",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 59,
+    "Theme": "Octopus Deploy",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 60,
+    "Theme": "Jenkins",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 61,
+    "Theme": "Docker",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 62,
+    "Theme": "Cake/Psake",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 63,
+    "Theme": "Kubernetes",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 64,
+    "Theme": "Azure Devops",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 65,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 8
+  },
+  {
+    "Id": 66,
+    "Theme": "Azure Virtual Machines",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 67,
+    "Theme": "Azure App Services",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 68,
+    "Theme": "Azure Storage",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 69,
+    "Theme": "Azure Cosmos DB",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 70,
+    "Theme": "Azure Redis Cache",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 71,
+    "Theme": "Azure Event Hub",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 72,
+    "Theme": "Azure Functions",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 73,
+    "Theme": "Azure CLI",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 74,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 9
+  },
+  {
+    "Id": 75,
+    "Theme": "ElasticSearch",
+    "CompetenceMatriceId": 10
+  },
+  {
+    "Id": 76,
+    "Theme": "Kibana",
+    "CompetenceMatriceId": 10
+  },
+  {
+    "Id": 77,
+    "Theme": "LogStash",
+    "CompetenceMatriceId": 10
+  },
+  {
+    "Id": 78,
+    "Theme": "Redis",
+    "CompetenceMatriceId": 10
+  },
+  {
+    "Id": 79,
+    "Theme": "Apache Solr",
+    "CompetenceMatriceId": 10
+  },
+  {
+    "Id": 80,
+    "Theme": "Apache Hadoop",
+    "CompetenceMatriceId": 10
+  },
+  {
+    "Id": 81,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 10
+  },
+  {
+    "Id": 82,
+    "Theme": ".NET Core Dependancy Injection",
+    "CompetenceMatriceId": 11
+  },
+  {
+    "Id": 83,
+    "Theme": "Autofac",
+    "CompetenceMatriceId": 11
+  },
+  {
+    "Id": 84,
+    "Theme": "Ninjext",
+    "CompetenceMatriceId": 11
+  },
+  {
+    "Id": 85,
+    "Theme": "Unity",
+    "CompetenceMatriceId": 11
+  },
+  {
+    "Id": 86,
+    "Theme": "StructureMap",
+    "CompetenceMatriceId": 11
+  },
+  {
+    "Id": 87,
+    "Theme": "Windsor",
+    "CompetenceMatriceId": 11
+  },
+  {
+    "Id": 88,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 11
+  },
+  {
+    "Id": 89,
+    "Theme": "OWASP",
+    "CompetenceMatriceId": 12
+  },
+  {
+    "Id": 90,
+    "Theme": "Identity Server",
+    "CompetenceMatriceId": 12
+  },
+  {
+    "Id": 91,
+    "Theme": "Auth0",
+    "CompetenceMatriceId": 12
+  },
+  {
+    "Id": 92,
+    "Theme": "OAuth",
+    "CompetenceMatriceId": 12
+  },
+  {
+    "Id": 93,
+    "Theme": "OpenId Connect",
+    "CompetenceMatriceId": 12
+  },
+  {
+    "Id": 94,
+    "Theme": "ASP.NET Membership",
+    "CompetenceMatriceId": 12
+  },
+  {
+    "Id": 95,
+    "Theme": "Andre jeg kjenner godt til",
+    "CompetenceMatriceId": 12
+  },
+  {
+    "Id": 96,
+    "Theme": "log4net",
+    "CompetenceMatriceId": 13
+  },
+  {
+    "Id": 97,
+    "Theme": "NLog",
+    "CompetenceMatriceId": 13
+  },
+  {
+    "Id": 98,
+    "Theme": "Serilog",
+    "CompetenceMatriceId": 13
+  },
+  {
+    "Id": 99,
+    "Theme": "Azure Application Insights",
+    "CompetenceMatriceId": 13
+  },
+  {
+    "Id": 100,
+    "Theme": "Andre jeg kjenner godt til",
+    "CompetenceMatriceId": 13
+  },
+  {
+    "Id": 101,
+    "Theme": "Nancy",
+    "CompetenceMatriceId": 14
+  },
+  {
+    "Id": 102,
+    "Theme": "ServiceStack",
+    "CompetenceMatriceId": 14
+  },
+  {
+    "Id": 103,
+    "Theme": "React Native",
+    "CompetenceMatriceId": 14
+  },
+  {
+    "Id": 104,
+    "Theme": "Xamarin",
+    "CompetenceMatriceId": 14
+  },
+  {
+    "Id": 105,
+    "Theme": "Mobilapp (native)",
+    "CompetenceMatriceId": 14
+  },
+  {
+    "Id": 106,
+    "Theme": "Andre jeg kjenner godt",
+    "CompetenceMatriceId": 14
+  }
+]

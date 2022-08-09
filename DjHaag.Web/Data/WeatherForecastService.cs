@@ -2,6 +2,10 @@ namespace DjHaag.Web.Data;
 
 public class WeatherForecastService
 {
+    public WeatherForecastService()
+    {
+        
+    }
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
