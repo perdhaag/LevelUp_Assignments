@@ -1,5 +1,6 @@
 # ASP.NET Core (.NET Framework)
 
+
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
@@ -26,6 +27,7 @@ steps:
     version: '6.0.x'
 
 - task: DotNetCoreCLI@2
+  displayName: "Restore solution"
   inputs:
     command: 'restore'
     feedsToUse: 'select'
@@ -35,9 +37,26 @@ steps:
   inputs:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
-  displayName: 'dotnet build $(buildConfiguration)'
-
+  displayName: 'Build solution'
+  
 - task: DotNetCoreCLI@2
+  displayName: "Run tests"
+  inputs:
+    command: test
+    projects: '**/*Tests/*.csproj'
+    arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloudIO'
+    organization: 'perhaagensen'
+    scannerMode: 'MSBuild'
+    projectKey: 'perhaagensen_LevelUp'
+    projectName: 'LevelUp'
+
+- task: SonarCloudAnalyze@1
+- task: DotNetCoreCLI@2
+  displayName: "Publish"
   inputs:
     command: publish
     publishWebProjects: True
@@ -45,16 +64,19 @@ steps:
     zipAfterPublish: True
 
 - task: PublishPipelineArtifact@1
+  displayName: "Publish pipelineArtifact"
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'myWebsiteName'
 - task: DotNetCoreCLI@2
+  displayName: "Create artifactZipFile"
   inputs:
     command: publish
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
 - task: AzureWebApp@1
+  displayName: "Deploy to azure web app"
   inputs:
     azureSubscription: 'Azure subscription 1(c9274575-a810-4dcd-8b6c-b9dd2940590b)'
     appType: 'webApp'
