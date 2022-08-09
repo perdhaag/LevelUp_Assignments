@@ -5,16 +5,19 @@ using DjHaag.Persitence;
 using Microsoft.EntityFrameworkCore;
 using DjHaag.Web.Data;
 using DjHaag.Web.Pages;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
-
+builder.Services.AddMudServices();
+builder.Services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true;  });
 
 builder.Services.AddDbContext<DjHaagDbContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("myconn")));
+
+builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddTransient<AddPersonCommand>();
 builder.Services.AddTransient<GetPersonQuery>();
 builder.Services.AddTransient<GetCompetenceMatrice>();
@@ -34,7 +37,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 

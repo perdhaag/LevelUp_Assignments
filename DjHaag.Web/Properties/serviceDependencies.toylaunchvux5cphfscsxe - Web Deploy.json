@@ -1,9 +1,8 @@
 {
   "dependencies": {
-    "mssql1": {
+    "mssql2": {
       "secretStore": "AzureAppSettings",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/djhaagwebserver/databases/DjHaag.Web_db",
-      "type": "mssql.azure",
+      "type": "mssql.onprem",
       "connectionId": "ConnectionStrings:myconn",
       "dynamicId": null
     }

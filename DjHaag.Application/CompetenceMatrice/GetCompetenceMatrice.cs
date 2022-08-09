@@ -13,11 +13,10 @@ public class GetCompetenceMatrice
         _dbContext = dbContext;
     }
 
-    public async Task<Persitence.CompetenceMatrice>  GetCompetenceMatriceQuery()
+    public async Task<IIncludableQueryable<Persitence.CompetenceMatrice, List<CategoryTheme>>> GetCompetenceMatriceQuery()
     {
-        var test = await _dbContext.CompetenceMatrices
-            .Where(x => x.CompetenceMatricesCategory == CompetenceMatricesCategory.Microsoft)
-            .Include(x => x.CategoryThemes).FirstOrDefaultAsync();
+        var test = _dbContext.CompetenceMatrices
+            .Include(x => x.CategoryThemes);
 
         return test;
     }

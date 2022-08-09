@@ -1,6 +1,62 @@
 @page "/kompetansematrise"
+@using DjHaag.Persitence
+@using DjHaag.Application.CompetenceMatrice
+@using Microsoft.EntityFrameworkCore.Query
+@inject GetCompetenceMatrice _queryHandler
 <h3>Kompetansematrise</h3>
+@if (CompetenceMatrices is null)
+{
+    <div>
+        <div class="spinner"></div>
+    </div>
+}
+else
+{
+    foreach (var competence in CompetenceMatrices.Result)
+    {
+        <div style="font-size: 30px; display: table; margin: 0 auto">
+            @competence.CompetenceMatricesCategory
+        </div>
+        <MudForm Style="display: table; margin: 0 auto;">
+            @foreach (var theme in competence.CategoryThemes)
+            {
+                if (theme.Theme != "Andre jeg kjenner godt")
+                {
+                    <MudRadioGroup @bind-SelectedOption=Dense_Radio>
+                        <p style="font-weight: bold">@theme.Theme</p>
+                        <MudRadio Option="false" Color="Color.Primary" Dense="true">1</MudRadio>
+                        <MudRadio Option="false" Color="Color.Secondary" Dense="false">2</MudRadio>
+                        <MudRadio Option="false" Color="Color.Secondary" Dense="false">3</MudRadio>
+                        <MudRadio Option="false" Color="Color.Secondary" Dense="false">4</MudRadio>
+                        <MudRadio Option="false" Color="Color.Secondary" Dense="false">5</MudRadio>
+                    </MudRadioGroup>
+                }
+                else
+                {
+                    <p>Alle riktig?</p>
+                }
+            }
+        </MudForm>
+    }
+}
 
 @code {
+    public string a;
+    public bool Dense_Radio { get; set; } = true;
+    Task<IIncludableQueryable<CompetenceMatrice, List<CategoryTheme>>> CompetenceMatrices;
+
+    protected override Task OnInitializedAsync()
+    {
+        return base.OnInitializedAsync();
+    }
     
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            CompetenceMatrices = _queryHandler.GetCompetenceMatriceQuery();
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
 }
