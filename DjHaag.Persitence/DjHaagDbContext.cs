@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
+using DjHaag.Persitence.Entities;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -13,9 +14,9 @@ public class DjHaagDbContext : DbContext
     
     public DbSet<Person> Persons { get; set; }
 
-    public DbSet<CompetenceMatrice> CompetenceMatrices { get; set; }
+    public DbSet<CategoryEntity> CompetenceMatrices { get; set; }
 
-    public DbSet<CategoryTheme> CategoryThemes { get; set; }
+    public DbSet<SkillEntity> CategoryThemes { get; set; }
 
     // protected override void OnModelCreating(ModelBuilder modelBuilder)
     // {

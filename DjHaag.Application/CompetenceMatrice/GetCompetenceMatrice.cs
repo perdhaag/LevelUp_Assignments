@@ -13,11 +13,11 @@ public class GetCompetenceMatrice
         _dbContext = dbContext;
     }
 
-    public async Task<List<Persitence.CompetenceMatrice>> GetCompetenceMatriceQuery()
+    public async Task<List<Persitence.Category>> GetCompetenceMatriceQuery()
     {
-        var test = await _dbContext.CompetenceMatrices
+        var categoryEntitiesAndSkills = await _dbContext.CompetenceMatrices
             .Include(x => x.CategoryThemes).ToListAsync();
 
-        return test;
+        return categoryEntitiesAndSkills;
     }
 }

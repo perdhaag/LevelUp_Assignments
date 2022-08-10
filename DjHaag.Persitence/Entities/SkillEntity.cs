@@ -1,14 +1,15 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DjHaag.Persitence;
+namespace DjHaag.Persitence.Entities;
 
-public class CategoryTheme
+public class SkillEntity
 {
     public int Id { get; set; }
     
-    public string Theme { get; set; }
+    public string Name { get; set; }
 
     [ForeignKey("CompetenceMatriceId")]
-    public CompetenceMatrice CompetenceMatrice { get; set; }
+    public CategoryEntity Category { get; set; }
+    
     public int CompetenceMatriceId { get; set; }
 }

@@ -1,4 +1,4 @@
-@page "/kompetansematrise"
+@page "/matrix"
 @using DjHaag.Persitence
 @using DjHaag.Application.CompetenceMatrice
 @using Microsoft.EntityFrameworkCore.Infrastructure.Internal
@@ -37,7 +37,6 @@ else
             }
             else
             {
-                <p>Alle riktig?</p>
             }
         }
     </MudForm>
@@ -53,7 +52,7 @@ else
     
     private List<CompetenceMatriceAnswerModel> MatriceAnswerModels { get; set; }
 
-    private List<CompetenceMatrice> CompetenceMatrices { get; set; }
+    private List<Category> CompetenceMatrices { get; set; }
 
     CompetenceMatriceAnswerModel Model;
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -82,12 +81,10 @@ else
     private async Task NextCompetenceTheme()
     {
         Section++;
-        await InvokeAsync(StateHasChanged);
     }
 
     private async Task PreviousCompetenceTheme()
     {
         Section--;
-        await InvokeAsync(StateHasChanged);
     }
 }
