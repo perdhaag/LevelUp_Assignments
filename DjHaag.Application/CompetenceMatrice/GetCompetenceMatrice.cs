@@ -13,10 +13,10 @@ public class GetCompetenceMatrice
         _dbContext = dbContext;
     }
 
-    public async Task<IIncludableQueryable<Persitence.CompetenceMatrice, List<CategoryTheme>>> GetCompetenceMatriceQuery()
+    public async Task<List<Persitence.CompetenceMatrice>> GetCompetenceMatriceQuery()
     {
-        var test = _dbContext.CompetenceMatrices
-            .Include(x => x.CategoryThemes);
+        var test = await _dbContext.CompetenceMatrices
+            .Include(x => x.CategoryThemes).ToListAsync();
 
         return test;
     }

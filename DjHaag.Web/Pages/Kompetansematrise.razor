@@ -1,7 +1,10 @@
 @page "/kompetansematrise"
 @using DjHaag.Persitence
 @using DjHaag.Application.CompetenceMatrice
+@using Microsoft.EntityFrameworkCore.Infrastructure.Internal
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
 @using Microsoft.EntityFrameworkCore.Query
+
 @inject GetCompetenceMatrice _queryHandler
 <h3>Kompetansematrise</h3>
 @if (CompetenceMatrices is null)
@@ -12,51 +15,79 @@
 }
 else
 {
-    foreach (var competence in CompetenceMatrices.Result)
-    {
-        <div style="font-size: 30px; display: table; margin: 0 auto">
-            @competence.CompetenceMatricesCategory
-        </div>
-        <MudForm Style="display: table; margin: 0 auto;">
-            @foreach (var theme in competence.CategoryThemes)
+    var comp = CompetenceMatrices.FirstOrDefault(x => x.CompetenceMatricesCategory == (CompetenceMatricesCategory)Section);
+    <div style="font-size: 30px; display: table; margin: 0 auto">
+        @comp.CompetenceMatricesCategory
+    </div>
+    <MudForm Model="@Model" Style="display: table; margin: 0 auto;">
+        @foreach (var theme in comp.CategoryThemes.Where(x => x.CompetenceMatriceId == Section).ToList())
+        {
+            if (theme.Theme != "Andre jeg kjenner godt")
             {
-                if (theme.Theme != "Andre jeg kjenner godt")
-                {
-                    <MudRadioGroup @bind-SelectedOption=Dense_Radio>
-                        <p style="font-weight: bold">@theme.Theme</p>
-                        <MudRadio Option="false" Color="Color.Primary" Dense="true">1</MudRadio>
-                        <MudRadio Option="false" Color="Color.Secondary" Dense="false">2</MudRadio>
-                        <MudRadio Option="false" Color="Color.Secondary" Dense="false">3</MudRadio>
-                        <MudRadio Option="false" Color="Color.Secondary" Dense="false">4</MudRadio>
-                        <MudRadio Option="false" Color="Color.Secondary" Dense="false">5</MudRadio>
-                    </MudRadioGroup>
-                }
-                else
-                {
-                    <p>Alle riktig?</p>
-                }
+                var current = MatriceAnswerModels.FirstOrDefault(x => x.Id == theme.Id);
+                
+                <MudRadioGroup @bind-SelectedOption="current.Score" For="(() => current.Score)">
+                    <p style="font-weight: bold">@theme.Theme</p>
+                    <MudRadio Option="1" Color="Color.Primary">1</MudRadio>
+                    <MudRadio Option="2" Color="Color.Primary">2</MudRadio>
+                    <MudRadio Option="3" Color="Color.Primary">3</MudRadio>
+                    <MudRadio Option="4" Color="Color.Primary">4</MudRadio>
+                    <MudRadio Option="5" Color="Color.Primary">5</MudRadio>
+                </MudRadioGroup>
             }
-        </MudForm>
+            else
+            {
+                <p>Alle riktig?</p>
+            }
+        }
+    </MudForm>
+    @if (Section != 1)
+    {
+        <MudButton Variant="Variant.Filled" OnClick="@PreviousCompetenceTheme">Forrige side</MudButton>
     }
+    <MudButton Variant="Variant.Filled" OnClick="@NextCompetenceTheme">Neste side</MudButton>
 }
 
 @code {
-    public string a;
-    public bool Dense_Radio { get; set; } = true;
-    Task<IIncludableQueryable<CompetenceMatrice, List<CategoryTheme>>> CompetenceMatrices;
-
-    protected override Task OnInitializedAsync()
-    {
-        return base.OnInitializedAsync();
-    }
+    public int Section { get; set; } = 1; 
     
+    private List<CompetenceMatriceAnswerModel> MatriceAnswerModels { get; set; }
+
+    private List<CompetenceMatrice> CompetenceMatrices { get; set; }
+
+    CompetenceMatriceAnswerModel Model;
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            CompetenceMatrices = _queryHandler.GetCompetenceMatriceQuery();
+            MatriceAnswerModels = new List<CompetenceMatriceAnswerModel>();
+            CompetenceMatrices = await Task.Run(() => _queryHandler.GetCompetenceMatriceQuery());
+            foreach (var comp in CompetenceMatrices)
+            {
+                foreach (var theme in comp.CategoryThemes.Where(x => x.CompetenceMatriceId == comp.Id))
+                {
+                    MatriceAnswerModels.Add(new CompetenceMatriceAnswerModel()
+                    {
+                        Id = theme.Id,
+                        Score = 3,
+                        Theme = theme
+                    });
+                }
+            }
             await InvokeAsync(StateHasChanged);
         }
     }
+    
+    //Splitte de to nedre metodene til en, ev bruke en Enum med prev eller next
+    private async Task NextCompetenceTheme()
+    {
+        Section++;
+        await InvokeAsync(StateHasChanged);
+    }
 
+    private async Task PreviousCompetenceTheme()
+    {
+        Section--;
+        await InvokeAsync(StateHasChanged);
+    }
 }

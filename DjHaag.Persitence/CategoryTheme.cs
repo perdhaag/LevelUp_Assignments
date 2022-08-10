@@ -10,6 +10,5 @@ public class CategoryTheme
 
     [ForeignKey("CompetenceMatriceId")]
     public CompetenceMatrice CompetenceMatrice { get; set; }
-
     public int CompetenceMatriceId { get; set; }
 }
